@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>meme project</title>
+</head>
+
+<body onload="onInit()">
+
+  <!-- navigation bar  -->
+  <header class="main-header">
+    <div class="header-content main-layout flex align-center space-between">
+      <div class="logo"><img src="Layer_2.png"></div>
+
+      <button class="menu" onclick="onToggleMenu(this)" aria-label="Main Menu">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+          <path class="line line1"
+            d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+          <path class="line line2" d="M 20,50 H 80" />
+          <path class="line line3"
+            d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
+      </button>
+
+
+      <ul class="main-nav flex clean-list">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Gallery</a></li>
+      </ul>
+    </div>
+
+  </header>
+
+
+  <!-- main page Gallery presenation -->
+
+  <div class="main-page">
+
+
+    <div class="search-div main-layout flex align-center">
+      <div class="search align-center">
+        <input type="text" class="searchTerm" placeholder="Enter search keyword">
+        <button type="submit" class="searchButton">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+
+
+
+
+    <main class="gallery main-layout">
+      <section class="mems">
+      </section>
+
+    </main>
+
+    <main class="editor">
+      <div class="canvas-container">
+        <canvas id="my-canvas" height="450" width="450" onclick="draw(event)"></canvas>
+      </div>
+      <section class="edit-options flex">
+        <input class="input-meme" type="text" onkeyup="onSetText(this.value)">
+        <div class="btns-container flex">
+          <button class="btn-switch" onclick="onSwitchLine()"><img
+              src="img/up-and-down-opposite-double-arrows-side-by-side.png"></button>
+          <button class="btn-add" onclick="onAddLine()"><img src="img/add.png" alt=""></button>
+          <button class="btn-remove" onclick="onRemoveLine()"><img src="img/trash.png"></button>
+        </div>
+
+      </section>
+
+    </main>
+
+
+
+
+
+
+    <footer>
+      <div class="deatiles flex align-center space-between">
+
+        <img class="me-img main-layout" src="https://ca.slack-edge.com/T021743D5T8-U025LJVAX42-ea2f51e8112f-512" alt="">
+        <div class="me-text main-layout">
+          <h2>Koren turgeman</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
+            eaque, laboriosam veritatis, quos non quis ad perspiciatis,
+            .</p>
+
+        </div>
+
+      </div>
+
+      <div class="page-footer flex align-center">
+        <div class="logo"><img src="Layer_2.png"></div>
+
+      </div>
+    </footer>
+
+  </div>
+
+
+
+
+
+
+
+  <script src="https://kit.fontawesome.com/4189113ded.js" crossorigin="anonymous"></script>
+  <script src="js/meme-service.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

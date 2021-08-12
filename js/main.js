@@ -39,7 +39,7 @@ function renderCanvas() {
   var img = new Image()
   var currImg = getImgById(meme.selectedImgId)
   img.src = currImg.url
-  img.onload = function () {
+  img.onload = () => {
     clearCanvas()
     setInputText()
     gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height)
@@ -73,4 +73,25 @@ function drawText(line, x, y) {
   gCtx.textAlign = line.align
   gCtx.fillText(line.txt, x, y)
   gCtx.strokeText(line.txt, x, y)
+}
+
+function onAddLine() {
+  addLine()
+  renderCanvas()
+}
+
+function onSwitchLine() {
+  switchLine()
+  renderCanvas()
+}
+
+function onRemoveLine() {
+  removeLine()
+  renderCanvas()
+}
+
+function resizeCanvas() {
+  const elContainer = document.querySelector('.canvas-container')
+  gElCanvas.width = elContainer.offsetWidth
+  gElCanvas.height = elContainer.offsetHeight
 }
